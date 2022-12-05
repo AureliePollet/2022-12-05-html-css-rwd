@@ -1,0 +1,155 @@
+
+/*
+dimensions les plus vues en web:
+px      ==>         pixel
+em      ==>         cadratin: unité de mesure en print sur les presses
+                    le cadratin se calcul par rapport à son parent
+rem     ==>         cadratin racine: se calcule par rapport a la taille racine de police
+%       ==>         pourcentage, se calcule par rapport à l'élément qui le contient
+vw 
+et vh   ==>         viweport widht et viewport height: correspond à la taille d'affichage
+                    de la page en largeur et hauteur
+                    si l'affichage en largeur 768px alors 20 vw=153.6 px
+
+
+                    si 2em=32px, 1em=16 px
+*/
+
+:root{
+
+    font-family: Arial, Helvetica, sans-serif;
+    --orange-halloween: darkorange;
+    --header-bg-color: black;
+    --header-font-color: white;
+    --nav-princ-bg-color: black;
+    --nav-princ-font-color: white;
+    --nav-princ-border-link: rgba(192, 180, 180, 0.807);
+
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+
+}
+
+/* déclarations générales: */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Les classes*/
+
+.test-content-box div{
+
+    box-sizing: content-box;
+
+
+}
+
+.test-border-box div{
+
+    box-sizing: border-box;
+
+}
+
+.moitie {
+
+    width: 50%;
+    height: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    display: inline-block;
+
+}
+
+.deuxEm {
+    font-size: 2em;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.deuxRem {
+    font-size: 2rem;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+/* déclaration sur l'archi*/
+
+body{
+    margin: 0;
+}
+
+body > header {
+
+  background-color: var(--header-bg-color);
+  color: var(--header-font-color);
+  text-align: center;
+}
+
+body > nav,
+body > footer {
+
+    background-color: var(--nav-princ-bg-color);
+    color: var(--nav-princ-font-color);
+}
+
+body > nav  ul,
+body > footer  ul {
+    margin: 0;
+    list-style-type: none; /* enleve les puces de liste*/
+    padding: 0;
+    line-height: 2.5rem;
+}
+
+
+body > nav  ul a,
+body > nav  ul a:visited,
+body > footer  ul a,
+body > footer  ul a:visited
+ {
+    color: var(--nav-princ-font-color);
+    text-decoration: none;
+    display: block;
+    padding-left: 25px;
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color:var(--nav-princ-border-link) ;
+}
+
+
+body > nav  ul a:hover, /* hover lui affecte une fonction au survol(exemple fonction de couleur ou autre)*/
+body > nav  ul a:focus, /* focus lui affecte une fonction au survol par navigation clavier*/ 
+body > footer ul a:hover,
+body > footer ul a:focus {
+
+    background-color: var(--nav-princ-font-color);
+    color: var(--nav-princ-bg-color);
+}
+
+body > main {
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > main > section article {
+
+    padding: 1rem;
+}
+
+body > footer  ul {
+    line-height: 2rem;
+}
+
+body > footer h4 {
+    text-align: center;
+}

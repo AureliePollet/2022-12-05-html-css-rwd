@@ -11,6 +11,15 @@
         - liens CSS
         - appel des fichiers JS
     -->
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <style>
+        .rouge-gras {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -50,7 +59,11 @@
                 <main>
                     <!-- toujours ecrire du texte dans une balise, paragraphe ou autre signifiant ce qu'est le texte-->
                     <p>
-                       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, officiis facere quisquam officia inventore doloremque pariatur, fugiat animi dolorum rerum aut atque aliquam iusto exercitationem esse sunt! Doloremque voluptatem quasi deleniti voluptatibus vitae voluptas expedita blanditiis, impedit, eaque incidunt vel. Sint ut voluptatem magni temporibus illum eveniet ad alias quibusdam!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, officiis facere quisquam
+                        officia inventore doloremque pariatur, fugiat animi dolorum rerum aut atque aliquam iusto
+                        exercitationem esse sunt! Doloremque voluptatem quasi deleniti voluptatibus vitae voluptas
+                        expedita blanditiis, impedit, eaque incidunt vel. Sint ut voluptatem magni temporibus illum
+                        eveniet ad alias quibusdam!
                     </p>
                     <pre> <!-- juste pour info, pas top à utiliser-->
 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -60,16 +73,21 @@ assumenda quidem? Odit, animi! Dolorum, modi possimus!
                     </pre>
                     <!-- balise pour changer la tete du texte en ligne-->
                     <p>
-                        Lorem ipsum dolor sit amet <code>consectetur adipisicing elit</code> . Molestias vero, illum eaque illo odio ab consequatur earum repellendus velit blanditiis asperiores saepe, officia ipsam iure exercitationem. Vel quos consequatur eius.
+                        Lorem ipsum dolor sit amet <code>consectetur adipisicing elit</code> . Molestias vero, illum
+                        eaque illo odio ab consequatur earum repellendus velit blanditiis asperiores saepe, officia
+                        ipsam iure exercitationem. Vel quos consequatur eius.
                     </p>
                     <p>
-                       &copy;
-                       &trade;
+                        &copy;
+                        &trade;
                     </p>
-                    <blockquote> <!-- balise paragraphe avec marge sur les côtés, sert souvent à mettre en avant des citations-->
+                    <blockquote>
+                        <!-- balise paragraphe avec marge sur les côtés, sert souvent à mettre en avant des citations-->
                         <!-- q= guillemets-->
-                       <q> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, fugiat nam ipsam sequi odio sit neque repellendus quos consequatur asperiores ut porro. Suscipit ipsa magni odio et qui earum eveniet?</q><br/>
-                       <cite>Jules César</cite> <!-- cite ecrit en italique-->
+                        <q> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, fugiat nam ipsam sequi odio
+                            sit neque repellendus quos consequatur asperiores ut porro. Suscipit ipsa magni odio et qui
+                            earum eveniet?</q><br />
+                        <cite>Jules César</cite> <!-- cite ecrit en italique-->
                     </blockquote>
                 </main>
                 <footer>
@@ -80,12 +98,135 @@ assumenda quidem? Odit, animi! Dolorum, modi possimus!
                     </a>
                 </footer>
             </article>
+            <article>
+                <header>
+                    <h2>Quelques balises sur le texte</h2>
+                </header>
+                <main>
+                    <p>
+                        Il existe quelques balises pour changer l'apparence du texte.
+                        En <b>gras</b> (b ou bold) qui n'a pas d'infuluence sur le SEO (optimisation des moteurs de
+                        recherche),
+                        en revanche, la balise <strong>strong</strong> donne de l'importance au niveau du réferencement
+                    </p>
+                    <p>
+                        De même pour l' <i>italique</i> sans influence SEO, alors que l'<em>emphase</em> ajoute de
+                        l'importance au niveau du SEO.
+                    </p>
+                    <p>
+                        La balise font <font color="#ff0000" size="6" face="Arial">text</font>
+                        la balise apparait en rouge car elle est décomissionnée. Il ne faut normalement plus l'utiliser.
+                        A la place, on utilise la balise span <span class="rouge-gras">ma span</span> associée à une ou
+                        plusieurs classes.
+                    </p>
+                    <p>
+                        On peut: <s>biffer</s>, <u>souligner</u>, <mark>Marquer</mark>.
+                    </p>
+                    <p>
+                        H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>
+                    </p>
+
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2>Les images</h2>
+                </header>
+                <main>
+                    <p>
+                        Par défaut, on utilise la balise img
+                        <img src="./images/city-black-n-white.png" alt="Dessin d'une ville en noir et blanc" /> 
+                    </p>
+                    <p>
+                        Avec HTML5, il existe une balise faîte pour encadre sémantiquement des documents, ou média, avec
+                        l'option d'y adjoindre une légende, la balise figure.
+                    </p>
+                    <figure>
+                        <figcaption>
+                            wallpaper fallout 4
+                        </figcaption>
+                         <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="wallpaper fallout 4">
+                    </figure>
+                </main>
+
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+
+            </article>
+            <article>
+                <header>
+                    <h2>Les problèmes courants en CSS</h2>
+                </header>
+                <main>
+                    <p>
+                        Les tailles des éléments sont par défaut calculés sur le contenu des éléments.
+                        Si un paragraphe possède une bordure de 1px, une marge intérieure (padding) de 5px,
+                        et une largeur de 200px, la "boîte" affichée fera 212px de large, bordures comprises.
+                    </p>
+                    <p>
+                        La définition par défaut du calcul "box-sizing" est "content-box", si on veut la taille calculée
+                        depuis les bordures, on doit la forcer à "border-box"
+                    </p>
+                    <div class="test-content-box">
+                        <div class="moitie">az</div>
+                        <div class="moitie">az</div>
+                    </div>
+                    <div class="test-border-box">
+                        <div class="moitie">az</div>
+                        <div class="moitie">az</div>
+                    </div>
+                    <p>
+                        Les tailles calculées: si vous voulez utiliser
+                        des cadratins (em), il est plus sûr d'utiliser
+                        les cadratins racine (rem) car ils sont toujours
+                        calculés par rapport au cadratin racin du user-agent
+                        (le style CSS du navigateur) et non pas le cadratin
+                        calculé du conteneur.
+                    </p>
+                    <div class="deuxEm">
+                        deux em
+                        <div class="deuxEm">
+                            deux em
+                        </div>
+                    </div>
+                    <div class="deuxRem">
+                        deux rem
+                        <div class="deuxRem">
+                            deux rem
+                        </div>
+                    </div>
+                </main>
+
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+
+            </article>
+
         </section>
     </main>
 
     <footer>
         <div>
-            <h4>Site map</h4>
+            <h4>Sitemap</h4>
             <nav>
                 <ul>
                     <li><a href="./index.html">Accueil</a></li>
