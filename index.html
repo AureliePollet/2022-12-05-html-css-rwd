@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,33 +12,122 @@
         - appel des fichiers JS
     -->
 </head>
+
 <body>
-   <header>
-    <!--un seul h1 par page, pour optimiser le référencement-->
-    <h1>Formation HTML5 - CSS3- RWD</h1>
-   </header>
-   <!-- 
+    <header id="top">
+        <!--un seul h1 par page, pour optimiser le référencement-->
+        <h1>Formation HTML5 - CSS3- RWD</h1>
+    </header>
+    <!-- 
     nav: partie navigation
     ul: liste non ordonnée
     li: lien
     pour mettre plusieurs liens d'affiler: li*8>a (8 liens href)
    -->
-   <nav>
+    <nav>
         <ul>
-            <li><a href="./index.html"></a></li>
-            <li><a href="./article.html"></a></li>
-            <li><a href="./contact.html"></a></li>
-            <li><a href="./media.html"></a></li>
-            <li><a href="./animation.html"></a></li>
-            <li><a href="./trucs.html"></a></li>
-            <li><a href="./grid.html"></a></li>
-            <li><a href="./bootstrap.html"></a></li>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="./article.html">Article</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./media.html">Media</a></li>
+            <li><a href="./animation.html">Animation CSS</a></li>
+            <li><a href="./trucs.html">Des trucs en CSS</a></li>
+            <li><a href="./grid.html">Grid CSS</a></li>
+            <li><a href="./bootstrap.html">Bootstrap</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="carousel">
 
-        </ul>   
 
-   </nav>
+        </section>
+        <section>
 
+            <article>
+                <header>
+                    <h2>Les balises de type paragraphe</h2>
+                </header>
+                <main>
+                    <!-- toujours ecrire du texte dans une balise, paragraphe ou autre signifiant ce qu'est le texte-->
+                    <p>
+                       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, officiis facere quisquam officia inventore doloremque pariatur, fugiat animi dolorum rerum aut atque aliquam iusto exercitationem esse sunt! Doloremque voluptatem quasi deleniti voluptatibus vitae voluptas expedita blanditiis, impedit, eaque incidunt vel. Sint ut voluptatem magni temporibus illum eveniet ad alias quibusdam!
+                    </p>
+                    <pre> <!-- juste pour info, pas top à utiliser-->
+Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+Sequi animi nobis sit eum? Nesciunt nisi autem blanditiis
+facere iure voluptate cumque minima! Distinctio,
+assumenda quidem? Odit, animi! Dolorum, modi possimus!
+                    </pre>
+                    <!-- balise pour changer la tete du texte en ligne-->
+                    <p>
+                        Lorem ipsum dolor sit amet <code>consectetur adipisicing elit</code> . Molestias vero, illum eaque illo odio ab consequatur earum repellendus velit blanditiis asperiores saepe, officia ipsam iure exercitationem. Vel quos consequatur eius.
+                    </p>
+                    <p>
+                       &copy;
+                       &trade;
+                    </p>
+                    <blockquote> <!-- balise paragraphe avec marge sur les côtés, sert souvent à mettre en avant des citations-->
+                        <!-- q= guillemets-->
+                       <q> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, fugiat nam ipsam sequi odio sit neque repellendus quos consequatur asperiores ut porro. Suscipit ipsa magni odio et qui earum eveniet?</q><br/>
+                       <cite>Jules César</cite> <!-- cite ecrit en italique-->
+                    </blockquote>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
+    </main>
 
+    <footer>
+        <div>
+            <h4>Site map</h4>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./article.html">Article</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./media.html">Media</a></li>
+                    <li><a href="./animation.html">Animation CSS</a></li>
+                    <li><a href="./trucs.html">Des trucs en CSS</a></li>
+                    <li><a href="./grid.html">Grid CSS</a></li>
+                    <li><a href="./bootstrap.html">Bootstrap</a></li>
+                </ul>
+            </nav>
+        </div>
 
+        <div>
+            <h4>Liens institutionnels</h4>
+            <nav>
+                <ul>
+                    <li><a href="#">CGV</a></li>
+                    <li><a href="#">CGU</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">Qui sommes-nous?</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <h4>Autres liens</h4>
+            <nav>
+                <ul>
+                    <li><a href="#">bla bli blu</a></li>
+                    <li><a href="#">bla bli blu</a></li>
+                    <li><a href="#">bla bli blu</a></li>
+                    <li><a href="#">bla bli blu</a></li>
+                    <li><a href="#">bla bli blu</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
+
 </html>
