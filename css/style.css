@@ -153,3 +153,16 @@ body > footer  ul {
 body > footer h4 {
     text-align: center;
 }
+
+
+/* permet de selectionner seulement certaines parties lors de l'impression
+permet d'enlever la mise en page par exemple des entetes... 
+Ci-dessous, on enleve tout ce qui est navigation et boutton*/
+
+/*@media print {
+    body > nav, button,body > footer {
+        display: none;
+    }
+    
+}*/
+
