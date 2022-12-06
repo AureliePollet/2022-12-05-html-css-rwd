@@ -11,7 +11,8 @@
         - liens CSS
         - appel des fichiers JS
     -->
-
+    <script src="./js/swipper-bundle.js"></script>
+    <link rel="stylesheet" href="./css/swipper-bundle.css" media="screen" />
     <link rel="stylesheet" href="./css/style.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
 
@@ -22,6 +23,33 @@
             font-weight: bold;
         }
     </style>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -49,8 +77,38 @@
     </nav>
     <main>
         <section id="carousel">
+            <div class="carousel">
+                <div class="swiper">
+                    <div class="swiper-wrapper center-swiper">
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./images/doc-signal.png">
+                                <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, quod! </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./images/dolf-signal.png">
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./images/drive-signal.png">
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./images/james-white-composite.jpg">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
 
-
+                </div>
+            </div>
         </section>
         <section>
 
@@ -68,11 +126,22 @@
                         eveniet ad alias quibusdam!
                     </p>
                     <pre> <!-- juste pour info, pas top à utiliser-->
-Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-Sequi animi nobis sit eum? Nesciunt nisi autem blanditiis
-facere iure voluptate cumque minima! Distinctio,
-assumenda quidem? Odit, animi! Dolorum, modi possimus!
+Lorem ipsum, dolor sit amet 
+consectetur adipisicing elit.
+Sequi animi nobis sit eum? 
+Nesciunt nisi autem blanditiis
+facere iure voluptate cumque 
+minima! Distinctio,
+assumenda quidem? Odit, 
+animi! Dolorum, modi possimus!
                     </pre>
+                </main>
+            </article>
+            <article>
+                <header>
+                    <h2>Les balises de type paragraphe</h2>
+                </header>
+                <main>
                     <!-- balise pour changer la tete du texte en ligne-->
                     <p>
                         Lorem ipsum dolor sit amet <code>consectetur adipisicing elit</code> . Molestias vero, illum
@@ -146,7 +215,7 @@ assumenda quidem? Odit, animi! Dolorum, modi possimus!
                 <main>
                     <p>
                         Par défaut, on utilise la balise img
-                        <img src="./images/city-black-n-white.png" alt="Dessin d'une ville en noir et blanc" /> 
+                        <img src="./images/city-black-n-white.png" alt="Dessin d'une ville en noir et blanc" />
                     </p>
                     <p>
                         Avec HTML5, il existe une balise faîte pour encadre sémantiquement des documents, ou média, avec
@@ -156,7 +225,7 @@ assumenda quidem? Odit, animi! Dolorum, modi possimus!
                         <figcaption>
                             wallpaper fallout 4
                         </figcaption>
-                         <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="wallpaper fallout 4">
+                        <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="wallpaper fallout 4">
                     </figure>
                 </main>
 
