@@ -14,6 +14,7 @@
     <script src="./js/swipper-bundle.js"></script>
     <link rel="stylesheet" href="./css/swipper-bundle.css" media="screen" />
     <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/article.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
 </head>
 
@@ -37,42 +38,41 @@
         <section>
             <article>
                 <header>
-                    <h2>Les formulaires</h2>
+                    <h2> Informations de l'article</h2>
                 </header>
-                <main>
-                    <h3>Notre formulaire</h3>
-                    <form action="./contact.html" method="get" id="formExemple">
-                        <fieldset>
-                            <legend>
-                                Civilité
-                            </legend>
-                            <p>
-                                <label for="nom">Nom</label> <input type="text" name="nom" id="nom" aria-describedby="info-nom" required autofocus placeholder="Votre nom ici..."/> <!--Autofocus permet de remplir directement le champ sans cliquer dessus-->
-                            </p>
-                            <div id="info-nom">
-                                Veuillez entrer votre nom dans ce champs
-                            </div>
-                            <p>
-                                <label for="prenom">Nom</label> <input type="text" name="prenom" id="prenom" aria-describedby="info-prenom" required autofocus placeholder="Votre prénom ici..."/> 
-                            </p>
-                            <div id="info-prenom">
-                                Veuillez entrer votre prénom dans ce champs
-                            </div>
+                <main class="article">
+                    <div class="information">
+                        <h3>Informations</h3>
+                        <aside>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, unde.</p>
+                        </aside>
+                        <aside>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, cupiditate.</p>
+                        </aside>
+                        <aside>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, rem.</p>
+                        </aside>
+                    </div>
+                    <div class="contenu">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Corrupti quo sint delectus odio officia eos repellat soluta nobis, earum perspiciatis?
+                        </p> 
+                        <hr>
+                        <figure class="img-gauche">
+                            <img src="./images/city-black-n-white.png" alt="Dessin d'une ville en noir et blanc" />
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo alias incidunt rem nisi! Iure voluptas nihil nam ipsam aliquam, non sequi hic voluptates dolore vel facilis inventore eaque quidem consectetur?</p>
+                       
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ducimus nisi nesciunt minus laborum voluptates esse molestiae expedita tempore. Beatae est explicabo sed doloribus consectetur nihil nostrum in veritatis autem consequatur voluptatem vel tempore, fuga cupiditate molestiae eveniet fugit. Temporibus a libero asperiores pariatur vel mollitia beatae nesciunt! Nemo, ea!</p>
+                        <hr>
+                        <figure class="img-droite">
+                            <img src="./images/james-white-composite.jpg" alt="James White" />
+                        </figure>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam quidem aperiam eaque inventore corrupti molestias voluptate alias, officiis exercitationem similique molestiae est facere. Dignissimos tempora vel nam molestias, alias ipsam tenetur magnam recusandae eligendi unde, soluta magni obcaecati natus. Libero illum repellat magni accusantium enim voluptatum quos deserunt quam nihil.</p>
+                    </div>
 
-                        </fieldset>
-                        <button type="submit" name="submitForm" value="Envoyer">
-                            Envoyer le formulaire
-                        </button>
-
-                        <button type="reset">
-                            Vider le formulaire
-                        </button>
-                    </form>
-                    
                 </main>
-                <footer>
-
-                </footer>
             </article>
         </section>
     </main>

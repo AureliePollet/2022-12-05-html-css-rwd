@@ -1,96 +1,84 @@
 
 /*
-dimensions les plus vues en web:
-px      ==>         pixel
-em      ==>         cadratin: unité de mesure en print sur les presses
-                    le cadratin se calcul par rapport à son parent
-rem     ==>         cadratin racine: se calcule par rapport a la taille racine de police
-%       ==>         pourcentage, se calcule par rapport à l'élément qui le contient
-vw 
-et vh   ==>         viweport widht et viewport height: correspond à la taille d'affichage
-                    de la page en largeur et hauteur
-                    si l'affichage en largeur 768px alors 20 vw=153.6 px
-
-
-                    si 2em=32px, 1em=16 px
+dimension les plus vues en web :
+px      =>  Pixel
+em      =>  cadratin : unité de mesure en print sur les presses
+            le cadratin se calcul par rapport à son parent
+rem     =>  cadratin racine : se calcul par rapport à la taille racine de police
+%       =>  pourcentage, se calcule par rapport à l'élément qui le contient
+vw & vh =>  viewport width & viewport height : correspond à la taille 
+            d'affichage de la page en largeur et en hauteur
+            si affichage en largeur 768px alors 20vw = 153.6 px
+si 2em = 32 px, 1em = 16px
 */
 
 :root{
-
     font-family: Arial, Helvetica, sans-serif;
-    --orange-halloween: darkorange;
+    --orange-halloween: #ff8c00;
     --header-bg-color: black;
     --header-font-color: white;
     --nav-princ-bg-color: black;
     --nav-princ-font-color: white;
-    --nav-princ-border-link: rgba(192, 180, 180, 0.807);
-
+    --nav-princ-border-link: rgba(255, 255, 255);
     font-size: 1.1rem;
     line-height: 1.6rem;
-
-    --element-guter-size:0.5rem;
-    --column-1-1: calc( 100% - calc(2*var(--element-guter-size))) ;
-    --column-1-2: calc( 50% - calc(2*var(--element-guter-size))) ;
-    --column-1-3: calc( 33% - calc(2*var(--element-guter-size))) ;
-    --column-2-3: calc( 66% - calc(2*var(--element-guter-size))) ;
-    --column-1-4: calc( 25% - calc(2*var(--element-guter-size))) ;
-    --column-3-4: calc( 75% - calc(2*var(--element-guter-size))) ;
-
-
-
+    --element-guter-size: 0.5rem;
+    --column-1-1: calc( 100% - calc( 2 * var(--element-guter-size)) );
+    --column-1-2: calc( 50% - calc( 2 * var(--element-guter-size)) );
+    --column-1-3: calc( 33% - calc( 2 * var(--element-guter-size)) );
+    --column-2-3: calc( 66% - calc( 2 * var(--element-guter-size)) );
+    --column-1-4: calc( 25% - calc( 2 * var(--element-guter-size)) );
+    --column-3-4: calc( 75% - calc( 2 * var(--element-guter-size)) );
+    --information-width: 500px;
+    --information-margin-right: 20px;
+    --information-tbody-tr-bg: rgb(214, 214, 214);
+    --information-thead-tr-bg: rgb(131, 130, 130);
 }
 
-/* déclarations générales: */
+/* déclarations générales*/
 
-*, *::before, *::after {
+*, *::before, *::after{
     box-sizing: border-box;
 }
 
-img {
-    max-width: 100%;
-}
-
-h1 {
+h1{
     margin: 0;
 }
 
-/* Les classes*/
+img{
+    max-width: 100%;
+}
+
+/* classes */
 
 .test-content-box div{
-
     box-sizing: content-box;
-
-
 }
 
 .test-border-box div{
-
     box-sizing: border-box;
-
 }
 
-.moitie {
-
+.moitie{
     width: 50%;
     height: 50px;
     border: 1px solid black;
     padding: 10px;
     display: inline-block;
-
 }
 
-.deuxEm {
+.deuxEm{
     font-size: 2em;
     border: 1px solid black;
     padding: 20px;
 }
-
-.deuxRem {
+.deuxRem{
     font-size: 2rem;
     border: 1px solid black;
     padding: 20px;
 }
-.center-swiper {
+
+.center-swiper{
     text-align: center;
 }
 
@@ -98,200 +86,296 @@ h1 {
     max-height: 400px;
 }
 
-/* déclaration sur l'archi*/
+main.article{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.information figure{
+    text-align: center;
+}
+
+.information table{
+    border-collapse:collapse;
+    width: 100%;
+  }
+
+.information tbody tr:nth-of-type(odd){
+    background-color: var(--information-tbody-tr-bg);
+}
+
+.information thead tr{
+    background-color: var(--information-thead-tr-bg);
+    color: white;
+}
+
+.information tbody th{
+    text-align: left;
+}
+
+.information td{
+    text-align: right;
+}
+
+figure.left{
+    float: left;
+    margin: unset;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background-color: black;
+}
+
+figure.right{
+    float: right;
+    margin: unset;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    background-color: black;
+}
+
+figure.left figcaption,
+figure.right figcaption{
+    background-color: white;
+}
+
+/* déclarations sur l'archi */
 
 body{
     margin: 0;
 }
 
-body > header {
-
-  background-color: var(--header-bg-color);
-  color: var(--header-font-color);
-  text-align: center;
+body > header{
+    background-color: var(--header-bg-color);
+    color: var(--header-font-color);
+    text-align: center;
 }
 
 body > nav,
-body > footer {
-
+body > footer{
     background-color: var(--nav-princ-bg-color);
     color: var(--nav-princ-font-color);
 }
 
-body > nav  ul,
-body > footer  ul {
+body > nav ul,
+body > footer ul{
     margin: 0;
-    list-style-type: none; /* enleve les puces de liste*/
+    list-style-type: none;
     padding: 0;
     line-height: 2.5rem;
 }
 
 body > nav ul li,
-body> footer ul li {
+body > footer ul li{
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color:var(--nav-princ-border-link) ;
+    border-bottom-color: var(--nav-princ-border-link);
 }
 
-
-body > nav  ul a,
-body > nav  ul a:visited,
-body > footer  ul a,
-body > footer  ul a:visited
- {
+body > nav ul a,
+body > nav ul a:visited,
+body > footer ul a,
+body > footer ul a:visited
+{
     color: var(--nav-princ-font-color);
     text-decoration: none;
     display: block;
     padding-left: 25px;
     padding-right: 25px;
-   
 }
 
-body > nav ul li:last-child {
+body > nav ul li:last-child{
     border-bottom: unset;
 }
 
-
-body > nav  ul a:hover, /* hover lui affecte une fonction au survol(exemple fonction de couleur ou autre)*/
-body > nav  ul a:focus, /* focus lui affecte une fonction au survol par navigation clavier*/ 
+body > nav ul a:hover,
+body > nav ul a:focus,
 body > footer ul a:hover,
-body > footer ul a:focus {
-
+body > footer ul a:focus
+{
     background-color: var(--nav-princ-font-color);
     color: var(--nav-princ-bg-color);
 }
 
 body > main,
-body >nav > ul,
-body > footer > div{
-
+body > nav > ul,
+body > footer > section{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-body > main > section article {
-
+body > main > section article{
     padding: 1rem;
     width: var(--column-1-1);
     margin: var(--element-guter-size);
 }
 
-body > footer  ul {
+body > footer ul{
     line-height: 2rem;
 }
 
-body > footer h4 {
+body > footer h4{
     text-align: center;
 }
 
-
-/* permet de selectionner seulement certaines parties lors de l'impression
-permet d'enlever la mise en page par exemple des entetes... 
-Ci-dessous, on enleve tout ce qui est navigation et boutton*/
-
-/*@media print {
-    body > nav, button,body > footer {
+/*
+@media print {
+    body > nav, button, body > footer{
         display: none;
     }
-    
-}*/
+}
+*/
 
-/* responsive pour portable portrait */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px){
     body > main,
-    body >nav > ul,
-    body > footer > div {
+    body > nav > ul,
+    body > footer > section{
         width: 540px;
-
     }
 }
 
-/* responsive pour portable paysage */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
     body > main,
-    body >nav > ul,
-    body > footer > div {
+    body > nav > ul,
+    body > footer > section{
         width: 720px;
-
     }
 
-
-    body >nav > ul {
-        display: flex; /* boite flexible */
+    body > nav > ul{
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    
     }
-    body > nav   ul li {
-        border-bottom: unset; /* unset = annule/reset*/
+
+    body > nav ul li{
+        border-bottom: unset;
     }
+
 }
 
-/* responsive pour tablette portrait */
-@media screen and (min-width: 992px) {
-    body > main,
-    body >nav > ul,
-    body > footer > div {
-        width: 960px;
+@media screen and (min-width: 992px){
 
+    figure.left, 
+    figure.right{
+        max-width: 250px;
     }
 
-    body > main > section:not(#carousel) {
+    figure.right{
+        text-align: center;
+    }
+
+    figure.right figcaption{
+        text-align: left;
+    }
+
+    main.article {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+    .information{
+        width: var(--information-width);
+        margin-right: var(--information-margin-right);
+        font-size: 0.9rem;
+    }
+
+    .article .contenu{
+        width: calc( 100% - calc( var(--information-margin-right) + var(--information-width) ) );
+    }
+
+    body > main,
+    body > nav > ul,
+    body > footer > section{
+        width: 960px;
+    }
+
+    body > main > section:not(#carousel){
         display: flex;
         flex-wrap: wrap;
     }
 
-    body > main > section article {
+    body > main > section article{
         width: var(--column-1-2);
     }
 
     body > main > section > article:last-child:nth-of-type(2n + 1){
         width: var(--column-1-1);
     }
-}
-/* responsive pour tablette paysage */
-@media screen and (min-width: 1200px) {
-    body > main,
-    body >nav > ul,
-    body > footer > div {
-        width: 1140px;
 
+    body > footer > section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > footer > section > div{
+        width: var(--column-1-3);
+    }
+
+    body > footer > section > div li{
+        border-bottom: unset;
+    }
+    
+    body > footer > section > div li a{
+        /*text-align: center;*/
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+}
+
+@media screen and (min-width: 1200px){
+
+    figure.left, 
+    figure.right{
+        max-width: 350px;
+    }
+
+    body > main,
+    body > nav > ul,
+    body > footer > section{
+        width: 1140px;
     }
 
     body > main > section > article:last-child:nth-of-type(2n + 1){
         width: var(--column-1-3);
     }
 
-    body > main > section article {
+    body > main > section article{
         width: var(--column-1-3);
     }
 
     body > main > section > article:last-child:nth-of-type(3n + 2){
         width: var(--column-2-3);
     }
+
+    body > main > section > article:last-child:nth-of-type(3n + 1){
+        width: var(--column-1-1);
+    }
 }
 
-/* responsive pour ordi portrait */
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px){
     body > main,
-    body >nav > ul,
-    body > footer > div {
+    body > nav > ul,
+    body > footer > section{
         width: 1320px;
+    }
 
+    figure.left, 
+    figure.right{
+        max-width: 400px;
     }
 }
 
-/* responsive pour ordi paysage */
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1600px){
     body > main,
-    body >nav > ul,
-    body > footer > div {
+    body > nav > ul,
+    body > footer > section{
         width: 1500px;
-
     }
 
-    body > main > section article {
+    body > main > section article{
         width: var(--column-1-4);
     }
 
@@ -300,6 +384,11 @@ Ci-dessous, on enleve tout ce qui est navigation et boutton*/
     }
 
     body > main > section > article:last-child:nth-of-type(4n + 2){
-        width: var(--column-3-4); 
+        width: var(--column-3-4);
+    }
+
+    figure.left, 
+    figure.right{
+        max-width: 500px;
     }
 }
